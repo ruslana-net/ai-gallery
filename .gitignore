@@ -23,6 +23,6 @@
 /composer.phar
 /npm-debug.log
 
-src/Ai/AlbumsBundle/Resources/assets/components
+src/Ai/GalleryBundle/Resources/assets/components
 node_modules
 .sass-cache
