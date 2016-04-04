@@ -2,6 +2,7 @@
 
 The backend is a REST API based on [Symfony2](http://symfony.com)
 and the frontend is a [Marionette](http://marionettejs.com) MVC application in CoffeeScript.
+[Demo](http://gallery.zap.center/)
 
 ## Installation
 
