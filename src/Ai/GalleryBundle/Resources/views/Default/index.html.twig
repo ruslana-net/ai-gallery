@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery App - Symfony2, Doctrine2, Marionette, CofeeScript, Scss, Html5</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Symfony2 and Marionette WebApp">
+    <meta name="author" content="Ruslan Muriev">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link href="{{ asset('bundles/aigallery/css/main.css') }}" rel="stylesheet">
+</head>
+<body id="page-top">
+
+<header></header>
+<section id="main-region"></section>
+<footer></footer>
+
+{% block javascripts %}
+    <script data-main="{{ asset('bundles/aigallery/js/main.js') }}" src="{{ asset('bundles/aigallery/js/vendor/require.js') }}"></script>
+    <script>
+        define('config', function () {
+            return {
+                baseUrl: '{{ app.request.getBaseURL() }}',
+                albumsUploaderPath: '{{ oneup_uploader_endpoint('album') }}',
+                imagesUploaderPath: '{{ oneup_uploader_endpoint('image') }}',
+                imageDeletePath: '/api/image',
+                debug: {{ app.debug }}
+            }
+        });
+    </script>
+{% endblock %}
+
+</body>
+</html>

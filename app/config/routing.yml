@@ -1,0 +1,14 @@
+#File uploader
+oneup_uploader:
+    resource: .
+    type: uploader
+
+##Liip image routing
+#_imagine:
+#    resource: .
+#    type:     imagine
+
+# Gallery routing
+ai_albums:
+    resource: "@AiGalleryBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,90 @@
+<form enctype="multipart/form-data" data-remote="true"  >
+
+    <div class="row form-group">
+        <div id="fine-uploader-manual-trigger" class="col-md-12"></div>
+    </div>
+
+    <div class="form-group">
+        <input id="album-name" name="name" type="text" class="form-control" placeholder="Name *" value="{{name}}" maxlength="20" required="required" />
+    </div>
+
+    <div class="form-group">
+        <textarea id="album-text" name="descr" class="form-control" rows="2" maxlength="110" placeholder="Description">{{descr}}</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="album-icon" class="sr-only">icon</label>
+        {{#if icon}}
+        <input id="album-icon" type="hidden" name="icon" accept="image/*" data-endpoint="/image/data/album/{{icon}}" />
+        {{else}}
+        <input id="album-icon" type="hidden" name="icon" accept="image/*" data-original="null" data-endpoint="null" />
+        {{/if}}
+    </div>
+
+    <script type="text/template" id="qq-template-manual-trigger">
+        <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop a gallery icon here">
+            <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+                <span class="qq-upload-drop-area-text-selector"></span>
+            </div>
+            <div class="buttons">
+                <div class="qq-upload-button-selector btn btn-info" accept="image/*">
+                    <i class="fa fa-upload"></i>
+                    <span>Select image *</span>
+                </div>
+            </div>
+            <ul class="qq-upload-list-selector qq-upload-list" aria-live="polite" aria-relevant="additions removals">
+                <li>
+                    <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                    <img class="qq-thumbnail-selector" qq-max-size="225"  qq-server-scale >
+                    <span class="qq-upload-size-selector qq-upload-size"></span>
+
+                    <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                </li>
+            </ul>
+        </div>
+    </script>
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <button type="button" id="btn-close" class="btn btn-default btn-lg pull-left">Close</button>
+            <button type="button" id="btn-save" class="btn btn-primary btn-lg pull-right"><i class="fa fa-check"> </i> Save</button>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div id="fine-uploader-manual-trigger-images" class="col-md-12"></div>
+    </div>
+
+    <script type="text/template" id="qq-template-manual-trigger-images">
+        <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop album's images here">
+            <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+                <span class="qq-upload-drop-area-text-selector"></span>
+            </div>
+            <div class="buttons">
+                <div class="qq-upload-button-selector btn btn-info" accept="image/*">
+                    <i class="fa fa-upload"></i>
+                    <span>Select images *</span>
+                </div>
+            </div>
+            <ul class="qq-upload-list-selector qq-upload-list" aria-live="polite" aria-relevant="additions removals">
+                <li>
+                    <div class="qq-progress-bar-container-selector">
+                        <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                    </div>
+
+                    <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+
+                    <img class="qq-thumbnail-selector" qq-max-size="150"  qq-server-scale >
+
+                    <input class="edit-filename-selector form-control edit-filename " tabindex="0" maxlength="50" type="text" placeholder="Image title">
+
+                    <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                    <button class="btn btn-danger qq-upload-delete-selector qq-upload-delete">
+                        <i class="fa fa-times"></i>
+                        <span>Delete</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </script>
+</form>

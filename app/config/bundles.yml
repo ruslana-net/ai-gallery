@@ -1,0 +1,78 @@
+#Doctrine extentions
+stof_doctrine_extensions:
+    default_locale: %locale%
+    translation_fallback: true
+    orm:
+        default:
+          sluggable: true
+          timestampable: true
+          sortable: true
+
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    filters:
+        scss:
+            style: 'compressed'
+            compass: true
+            apply_to: "\.scss$"
+        compass: ~
+
+# Rest
+fos_rest:
+    routing_loader:
+        default_format: json
+    body_listener: true
+    view:
+        view_response_listener: force
+
+# Api Doc
+nelmio_api_doc: ~
+
+# DI extra
+jms_di_extra:
+    locations:
+        all_bundles: false
+        bundles: [AiGalleryBundle]
+        directories: ["%kernel.root_dir%/../src"]
+
+#File Uploader
+oneup_uploader:
+    orphanage:
+        maxage: 86400
+        directory: %kernel.cache_dir%/uploader/orphanage
+    mappings:
+        album:
+            frontend: fineuploader
+            use_orphanage: true
+        image:
+            frontend: fineuploader
+            use_orphanage: true
+
+#Images upload config
+liip_imagine:
+    resolvers:
+       default:
+          web_path: ~
+
+    filter_sets:
+        cache: ~
+        albums_thumb:
+            quality: 100
+            filters:
+                thumbnail: { size: [270, 200], mode: outbound }
+        images_thumb:
+            quality: 100
+            filters:
+                thumbnail: { size: [225, 150], mode: outbound }
+
+knp_paginator:
+    page_range: 5
+    default_options:
+        page_name: page
+        sort_field_name: sort
+        sort_direction_name: direction
+        distinct: true
+    template:
+        pagination: KnpPaginatorBundle:Pagination:sliding.html.twig     # sliding pagination controls template
+        sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template

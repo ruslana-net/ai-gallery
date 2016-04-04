@@ -1,0 +1,19 @@
+ai_gallery_app:
+    resource: "@AiGalleryBundle/Controller/AppController.php"
+    prefix:   /
+    type:     annotation
+
+ai_gallery_image:
+    resource: "@AiGalleryBundle/Controller/ImageController.php"
+    prefix:   /image
+    type:     annotation
+
+ai_gallery_albums_api:
+    resource: "@AiGalleryBundle/Controller/ApiAlbumsController.php"
+    prefix:   /api
+    type:     annotation
+
+ai_gallery_images_api:
+    resource: "@AiGalleryBundle/Controller/ApiImagesController.php"
+    prefix:   /api
+    type:     annotation

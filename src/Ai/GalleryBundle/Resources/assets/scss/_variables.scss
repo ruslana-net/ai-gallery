@@ -1,0 +1,55 @@
+// Colors taken from http://flatuicolors.com/
+$color-emerald: #d1000c;
+$color-white: #FFFFFF;
+$color-peter-river: #3498db;
+$color-midnight-blue: #2c3e50;
+$color-clouds: #ecf0f1;
+$color-nephritis: #cc564a;
+$color-orange: #fa772c;
+$color-pomegranate: #c0392b;
+$color-belize-hole: #2980b9;
+$color-alizarin: #e74c3c;
+$color-silver: #bdc3c7;
+$color-concrete: #95a5a6;
+$color-green: #32a657;
+$color-purple: #9328c7;
+
+/* Bootstrap variables */
+
+// Backgrounds
+$body-bg: $color-white;
+$list-group-hover-bg: $color-clouds;
+
+// Brand colors
+$brand-primary: $color-emerald;
+$brand-success: $color-green;
+$brand-warning: $color-orange;
+$brand-danger: $color-alizarin;
+$brand-info: $color-orange;
+
+// Buttons
+$btn-default-bg: $color-silver;
+
+// Links
+$link-hover-color: lighten($brand-primary, 10%);
+
+// States colors
+$state-danger-text: $brand-danger;
+$state-danger-border: $brand-danger;
+$state-success-text: $brand-success;
+$state-success-border: $brand-success;
+
+// Alerts
+$alert-danger-bg: $color-white;
+$alert-success-bg: $color-white;
+$alert-danger-close-color: $state-danger-text;
+$alert-success-close-color: $state-success-text;
+
+// Typography
+$text-muted: $color-concrete;
+$text-color: $color-midnight-blue;
+$font-family-base: 'Open Sans', 'sans-serif';
+
+// Borders
+$input-border: $color-clouds;
+$border-size-base: 1px;

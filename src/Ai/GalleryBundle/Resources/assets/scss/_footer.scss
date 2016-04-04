@@ -1,0 +1,14 @@
+footer {
+  height: 1px;
+  text-align: center;
+  font-size: 13px;
+
+  p {
+    @extend .text-muted;
+    margin: 10px 0 5px 0;
+  }
+
+  .code {
+    margin-bottom: 15px;
+  }
+}

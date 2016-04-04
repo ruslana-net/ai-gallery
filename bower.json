@@ -1,0 +1,22 @@
+{
+  "name": "ai-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.*",
+    "font-awesome": "~4.*",
+    "backbone.marionette": "~1.*",
+    "backbone.syphon": "~0.*",
+    "requirejs": "~2.*",
+    "text": "~2.*",
+    "handlebars": "~2.*",
+    "jquery.cookie": "~1.*",
+    "spin.js": "~2.*",
+    "moment": "~2.*",
+    "backbone-query-parameters": "~0.*",
+    "blueimp-file-upload": "jquery-file-upload#^9.12.1",
+    "blueimp-load-image": "^2.6.0",
+    "fineuploader-dist": "5.1.3",
+    "photoswipe": "^4.1.1"
+  }
+}

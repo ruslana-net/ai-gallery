@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  h1 {
+    text-align: center;
+    margin: 40px 0 40px;
+  }
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  margin-bottom: 40px;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+a {
+  &:hover {
+    @include transition(all 0.3s ease-in-out);
+  }
+}
