@@ -19,7 +19,7 @@ use Knp\Bundle\PaginatorBundle\Pagination\SlidingPagination;
 
 class ApiAlbumsController extends FOSRestController
 {
-    const numItemsPerPage=3;
+    const numItemsPerPage=6;
 
     /**
      * @Inject("doctrine")

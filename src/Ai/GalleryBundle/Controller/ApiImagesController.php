@@ -18,7 +18,7 @@ use FOS\RestBundle\Controller\Annotations\Put;
 
 class ApiImagesController extends Controller
 {
-    const numItemsPerPage=4;
+    const numItemsPerPage=8;
 
     /**
      * @Inject("doctrine")
