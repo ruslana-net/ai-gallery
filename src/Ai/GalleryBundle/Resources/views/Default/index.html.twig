@@ -28,7 +28,7 @@
                 albumsUploaderPath: '{{ oneup_uploader_endpoint('album') }}',
                 imagesUploaderPath: '{{ oneup_uploader_endpoint('image') }}',
                 imageDeletePath: '/api/image',
-                debug: {{ app.debug }}
+                debug: {% if app.debug %}1{% else %}0{% endif %}
             }
         });
     </script>

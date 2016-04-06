@@ -15,6 +15,10 @@ class AppController extends Controller
 
     protected $noCache=false;
 
+    protected $cacheTime=30;
+
+    protected $lastModified;
+
     /**
      * @Route("/")
      * @Method({"GET"})
